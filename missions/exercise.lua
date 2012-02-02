@@ -8,7 +8,15 @@
 ]]
 
 -- INSERT YOUR CODE HERE
+function string:starts_with(other)
+  local start = self:find(other)
+  return start == 1
+end
 
+function string:ends_with(other)
+  local start = self:find(other, #self-#other)
+  return start ~= nil
+end
 
 -- END OF CODE INSERT
 
